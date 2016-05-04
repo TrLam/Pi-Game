@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pi Game</title>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <style>
+	canvas {display:block; margin: 0 auto; }
+	div {
+		display:block; 
+		margin: 0 auto; 
+		height: 320px; 
+		width: 700px;
+	}
+	p {
+		margin-left:auto; 
+		margin-right:auto; 
+		margin-top:100px; 
+		text-align: center; 
+		font-family:'Impact';
+	}
+	input {
+		margin-left:290px; 
+		margin-right:auto; 
+		height:90px; 
+		width:90px; 
+	}
+  </style>
+</head>
+<body>
+  <canvas id= 'gameCanvas' width = '700' height = '320' style='background-color:#ccffcc'></canvas>
+  <div>
+    <p id = 'result' style="font-size:30px; color:#4d4d4d; "></p>
+    <input type ='image' name ='refresh' alt='Refresh' onclick='document.location.reload()'/>
+	<script>
+		document.addEventListener('keydown', enterHandler, false);
+		function enterHandler(e) {
+			if (e.keyCode === 13) {
+				document.location.reload();
+			}
+		};
+	</script>
+  </div>
+  <script src="/pi/pigame.js"></script>
+</body>
+</html>
